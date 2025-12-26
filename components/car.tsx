@@ -412,7 +412,8 @@ export default function CarListingPage() {
                 draggable={false}
                 className="w-full h-auto"
                 onError={(e) => {
-                  e.target.src = carImages[0];
+                  const target = e.target as HTMLImageElement;
+                  target.src = carImages[0];
                 }}
               />
 
